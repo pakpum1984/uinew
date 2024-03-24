@@ -124,8 +124,13 @@
           </iframe> -->
         <div class="diygw-grid col-4">
 
-           <iframe style="width:100%; height:1000px;" src="https://pakpum1984.github.io/carlendarcar/" frameborder="0" allowfullscreen></iframe>
+           <!-- <iframe style="width:100%; height:1000px;" src="https://pakpum1984.github.io/carlendarcar/" frameborder="0" allowfullscreen></iframe> -->
 
+          <div class="container"><br>
+           <button id="updateButton" style="display: none;"></button>
+            <div id="calendar"></div><br>
+            </div>
+          
           </div> 
       </div>
   </div>
@@ -177,6 +182,155 @@
   <div class="clearfix"></div>
 </div>
 		</div>
+
+      <script>
+
+
+    function updateCalendar() {
+              $.ajax({
+                  url: 'https://script.google.com/macros/s/AKfycbzDWCEbV3Z-9lyz6A9gLZ_JIUG17ch1Vd9FyDs5Fe_WX6HINdPLChcNMMTFoZIDRfoCWw/exec',
+                  dataType: 'json',
+                  success: function(data) {
+                      localStorage.setItem('cachedData', JSON.stringify(data));
+                      renderData(data);
+                       $.LoadingOverlay("hide");
+                  },
+                  error: function() {
+                      alert('เกิดข้อผิดพลาดในการโหลดข้อมูล');
+                  }
+              });
+          }
+
+          function renderData(data) {
+              $('#calendar').fullCalendar('destroy'); // Destroy previous calendar instance
+              $('#calendar').fullCalendar({
+                  header: {
+                      left: 'prev,next today',
+                      center: 'title',
+                      right: 'month'
+                  },
+                  height: 'auto',
+                  editable: true,
+                  timezone: 'local',
+                  locale: 'th',
+                  nextDayThreshold: '00:00:00',
+                  dayNamesShort: ['อา', 'จ', 'อ', 'พ', 'พฤ', 'ศ', 'ส'],
+                   eventRender: function(event, element) {
+                    var currentMonth = $('#calendar').fullCalendar('getDate').month();
+                    var eventMonth = moment(event.start).month();
+
+                    if (currentMonth === eventMonth) {
+                        element.find('.fc-time').hide();
+                        element.find('.fc-title').html(event.title + '<br>' + event.starttime + ' ถึง ' + event.endtime + ' น. ');
+
+                        if (event.status === 'รออนุมัติ') {
+                            element.css('background-color', 'yellow');
+                            element.find('.fc-title').css('color', 'black');
+                        } else if (event.status === 'อนุมัติ') {
+                            element.css('background-color', 'green');
+                        } else if (event.status === 'เสร็จงาน') {
+                            element.css('background-color', 'blue');
+                        } else if (event.status === 'กำลังใช้งาน') {
+                            element.css('background-color', 'green');
+                            setInterval(function() {
+                                element.fadeOut(500, function() {
+                                    element.fadeIn(500);
+                                });
+                            }, 1000);
+                        }
+                    } else {
+                        element.hide(); // ซ่อน event ของเดือนที่ไม่ใช่เดือนปัจจุบัน
+                    }
+
+
+                },
+                  events: data,
+                  eventClick: function(event) {
+                      // แสดง Popup รายละเอียดเมื่อคลิกที่ event
+                      Swal.fire({
+                          html: `
+                        <br>
+                        <table class='table table-bordered table-striped table-hover text-start' style="width:100%">
+                          <thead class='bg-primary text-white' style='color:white;'>
+                            <tr>   
+                              <th colspan='2' class='text-center'>รายละเอียดการจองรถ</th>
+                            </tr> 
+                          </thead>
+                          <tr>
+                            <th scope='col'>รถที่จอง</th>
+                            <td style="color:blue;">${event.title}</td>
+                          </tr>
+                          <tr>
+                            <th scope='col'>วันที่จองใช้งานรถ</th>
+                            <td style="color:blue;">${event.start.format('DD-MM-YYYY')}</td>
+                          </tr>
+                          <tr>
+                            <th scope='col'>เวลาออก</th>
+                            <td style="color:blue;">${event.starttime}</td>
+                          </tr>
+                          <tr>
+                            <th scope='col'>เวลาเข้า</th>
+                            <td style="color:blue;">${event.endtime}</td>
+                          </tr>
+                          <tr>
+                            <th scope='col'>ชื่อผู้จอง</th>
+                            <td style="color:blue;">${event.namebook}</td>
+                          </tr>
+                          <tr>
+                            <th scope='col'>สถานที่ๆไปติดต่อ</th>
+                            <td style="color:blue;">${event.loca}</td>
+                          </tr>
+                          <tr>
+                            <th scope='col'>อื่นๆ</th>
+                            <td style="color:blue;">${event.other}</td>
+                          </tr>
+                          <tr>
+                            <th scope='col'>สถานะ</th>
+                            <td style="color:blue;">${event.status}</td>
+                          </tr>
+                          <tr>
+                            <th scope='col'>สถานะการขับ</th>
+                            <td style="color:blue;">${event.driver}</td>
+                          </tr>
+                          <tr>
+                            <th scope='col'>ผู้อนุมัติ</th>
+                            <td style="color:blue;">${event.approve}</td>
+                          </tr>
+                        </table>
+                      `,
+                          confirmButtonText: 'ปิด',
+                          showCloseButton: true
+                      });
+                  }
+              });
+          }
+
+          $(document).ready(function() {
+            $.LoadingOverlaySetup({
+                size: "12",
+                imageColor: "#0d6efd"
+            });
+            $.LoadingOverlay("show");
+              var cachedData = localStorage.getItem('cachedData');
+
+              if (cachedData) {
+                  var parsedData = JSON.parse(cachedData);
+                  renderData(parsedData);
+                $.LoadingOverlay("hide");
+              } else {
+                  updateCalendar();
+              }
+
+          });
+
+        // อัปเดตปฏิทินเมื่อรีเฟรชหน้าจอ
+        $(window).on('load', function() {
+            updateCalendar();
+
+        });
+
+      </script>
+    
 	</body>
     <app-1>
     <script type="module">
