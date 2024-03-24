@@ -1,0 +1,1057 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/locale/th.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+    <link rel="stylesheet" href="https://miniapp-th.vercel.app/common/vant.min.css" />
+    <script src="https://miniapp-th.vercel.app/common/vue.js"></script>
+    <script src="https://miniapp-th.vercel.app/common/vant.min.js"></script>
+    <script src="https://miniapp-th.vercel.app/common/axios.min.js"></script>
+    <script src="https://sheet2api.com/v1/template.js"></script>
+    <link rel="stylesheet" href="https://miniapp-th.vercel.app/common/diygw-ui/index.css" />
+     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+
+
+    <style>
+      body {
+        font-family: "Prompt", sans-serif;
+       /* font-size: 13px; */
+
+      }
+      .container3 {
+          display: flex;
+      }
+      .color-box1 {
+          background-color: #CD5C5C; /* สีพื้นหลังของกล่อง */
+          padding: 10px;
+          text-align: center;
+          height:10px;
+
+      }
+       .color-box2 {
+          background-color: #1E90FF; /* สีพื้นหลังของกล่อง */
+          padding: 10px;
+          text-align: center;
+          height:10px;
+      }
+      .color-box3 {
+          background-color: #8470FF; /* สีพื้นหลังของกล่อง */
+          padding: 10px;
+          text-align: center;
+          height:10px;
+      }
+      .color-box4 {
+          background-color: green; /* สีพื้นหลังของกล่อง */
+          padding: 10px;
+          text-align: center;
+          height:10px;
+
+      }
+    </style>
+  </head>
+  <body>
+        <!-- <div id="app"> -->
+
+<div class="container-fluid container30324" id="app" data-spreadsheet-api="https://sheet2api.com/v1/27M01D5PTe81/data">
+  <div class="flex flex-wrap diygw-col-24 flex-direction-column justify-end items-end flex-clz">
+      <!-- #ifdef MP-WEIXIN -->
+      <div class="flex flex-wrap diygw-col-24 flex-direction-column flex1-clz"></div>
+      <!--  #endif -->
+      <div class="flex flex-wrap diygw-col-24 items-center flex16-clz">
+          <div class="flex flex-wrap diygw-col-24 items-center flex4-clz">
+              <!-- <img src="https://miniapp-th.vercel.app/static/hg-VIP.png" class="image-size diygw-image diygw-col-0 image-clz" mode="widthFix" /> -->
+              <div class="diygw-col-0 text-clz">  ระบบจองรถ</div>
+              <div class="diygw-col-0 text3-clz">สิทธิ์พิเศษ</div>
+          </div>
+          <div class="flex flex-wrap diygw-col-0 flex-direction-column items-center flex11-clz">
+              <img src="https://lh3.googleusercontent.com/d/1MYMwEEb-qPD32pR4yqCRxa719LMnkV-m" class="image2-size diygw-image diygw-col-0 image2-clz" mode="widthFix" />
+              <div class="diygw-col-0 text8-clz">กำลังใช้งาน</div>
+          </div>
+          <div class="flex flex-wrap diygw-col-0 flex-direction-column flex18-clz">
+              <div class="diygw-col-0 text17-clz">ยินดีต้อนรับ คุณ Admin</div>
+              <!-- <div class="diygw-col-0 text19-clz">{{User_Id}}
+              </div> -->
+          </div>
+          <div class="flex flex-wrap diygw-col-0 items-center flex19-clz">
+
+              <div class="diygw-col-0 text20-clz">รายการ</div>
+          </div>
+          <div class="flex diygw-col-24 grid-clz">
+              <div class="diygw-grid col-4">
+                  <!-- <div class="diygw-grid-item">
+                      <div class="diygw-grid-inner grid-item-clz">
+                          <div class="diygw-grid-icon diygw-avatar grid-icon-clz">
+                              <img mode="aspectFit" class="diygw-avatar-img" src="https://miniapp-th.vercel.app/static/f-vip1.png" />
+                          </div>
+                          <div class="diygw-grid-title">สำหรับคุณ</div>
+                      </div>
+                  </div>
+                  <div class="diygw-grid-item">
+                      <div class="diygw-grid-inner grid-item-clz">
+                          <div class="diygw-grid-icon diygw-avatar grid-icon-clz">
+                              <img mode="aspectFit" class="diygw-avatar-img" src="https://miniapp-th.vercel.app/static/f-vip2.png" />
+                          </div>
+                          <div class="diygw-grid-title">คูปอง</div>
+                      </div>
+                  </div>
+                  <div class="diygw-grid-item">
+                      <div class="diygw-grid-inner grid-item-clz">
+                          <div class="diygw-grid-icon diygw-avatar grid-icon-clz">
+                              <img mode="aspectFit" class="diygw-avatar-img" src="https://miniapp-th.vercel.app/static/f-bag.png" />
+                          </div>
+                          <div class="diygw-grid-title">พ้อยมอลล์</div>
+                      </div>
+                  </div>
+                  <div class="diygw-grid-item">
+                      <div class="diygw-grid-inner grid-item-clz">
+                          <div class="diygw-grid-icon diygw-avatar grid-icon-clz">
+                              <img mode="aspectFit" class="diygw-avatar-img" src="https://miniapp-th.vercel.app/static/f-collect.png" />
+                          </div>
+                          <div class="diygw-grid-title">รายการโปรด</div>
+                      </div>
+                  </div> -->
+              </div>
+          </div>
+
+      </div>
+  </div>
+
+   <!-- <img src="https://miniapp-th.vercel.app/static/bg.png" class="image1-size diygw-image diygw-col-24 image1-clz" mode="widthFix" /> -->
+
+  <div class="flex flex-wrap diygw-col-24 flex-direction-column flex3-clz">
+      <div class="diygw-col-24 text4-clz">ตารางลูกค้า</div>
+      <div class="flex diygw-col-24 grid1-clz" style=" height:auto;" >
+
+        <div class="diygw-grid col-4">
+
+
+           <div class="container">
+            <br>
+              <div id="calendarcus"></div><br>
+              <div class="container3">
+                &nbsp&nbsp&nbsp&nbsp&nbsp<div class="color-box1"></div>
+              <p style="font-size:12px;">=CM1</p>
+              &nbsp<div class="color-box2"></div>
+              <p style="font-size:12px;">=CM2</p>
+              &nbsp<div class="color-box3"></div>
+              <p style="font-size:12px;">=CM1/CM2</p>
+              &nbsp<div class="color-box4"></div>
+              <p style="font-size:12px;">=Gofield</p>
+
+              </div>
+               <br>
+             </div>
+
+          </div> 
+      </div>
+  </div>
+
+  <div class="flex diygw-col-24 diygw-bottom">
+      <div class="diygw-grid diygw-actions">
+
+          <button class="diygw-action">
+              <div class="diygw-grid-inner">
+                  <div class="diygw-grid-icon diygw-avatar" style="">
+                      <img mode="aspectFit" class="diygw-avatar-img" src="https://lh5.googleusercontent.com/d/1_OPNCDoy9G3uYnuUoWBo9Q_JDtOqBf6T" />
+                  </div>
+                  <div class="diygw-grid-title">บันทึกไมล์เข้า</div>
+              </div>
+          </button>
+          <button class="diygw-action">
+              <div class="diygw-grid-inner">
+                  <div class="diygw-grid-icon diygw-avatar" style="">
+                      <img mode="aspectFit" class="diygw-avatar-img" src="https://lh5.googleusercontent.com/d/1_rKNHFeEH8Ts727ucDZXjYuKHFYpMWeJ" />
+                  </div>
+                  <div class="diygw-grid-title">บันทึกไมล์ออก</div>
+              </div>
+          </button>
+        <button class="diygw-action">
+            <div class="diygw-grid-inner">
+                <div class="diygw-grid-icon diygw-avatar" style="">
+                    <img mode="aspectFit" class="diygw-avatar-img" src="https://lh5.googleusercontent.com/d/1RDzt-kaotgDDQhHUR7vuqSudOoBOM2Oh" />
+                </div>
+                <div class="diygw-grid-title">หน้าหลัก</div>
+            </div>
+        </button>
+          <button class="diygw-action">
+              <div class="diygw-grid-inner">
+                  <div class="diygw-grid-icon diygw-avatar" style="">
+                    <a href="/cuscarlendar.html">
+                      <img mode="aspectFit" class="diygw-avatar-img" src="https://lh5.googleusercontent.com/d/11-YYTncwbPfkKOdXpj5EvV9jwrXMPsRs" />
+                      </a>
+                  </div>
+                  <div class="diygw-grid-title">ตารางลูกค้า</div>
+              </div>
+          </button>
+          <button class="diygw-action">
+              <div class="diygw-grid-inner">
+                  <div class="diygw-grid-icon diygw-avatar" style="">
+                      <img mode="aspectFit" class="diygw-avatar-img" src="https://lh5.googleusercontent.com/d/1PK_8A5LzNrvtULp8C2qBgd9Jo16HthAz" />
+                  </div>
+                  <div class="diygw-grid-title">จองรถ</div>
+              </div>
+          </button>
+      </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+    </div>
+
+  
+
+      <script>
+
+        function updateCalendarcus() {
+            $.ajax({
+                url: 'https://script.google.com/macros/s/AKfycbzQziMYIKPG0-tzvKTshmAYzk5IGOU-7-jPTZEQRS8_4ySy4jYngXqtUlXYea3TDJNGwQ/exec',
+                dataType: 'json',
+                success: function(data) {
+                  var events = [];
+
+                  // สร้าง events จากข้อมูลที่ได้รับ
+                  for (var i = 0; i < data.length; i++) {
+                    var event = {
+                      title: data[i].title,
+                      namecus: data[i].namecus,
+                      start: moment(data[i].start).toDate(), // แปลงเป็นวัตถุ Date
+                      end: moment(data[i].end).add(1, 'days').toDate(), // แปลงเป็นวัตถุ Date และเพิ่มหนึ่งวัน
+                      piccus: data[i].piccus,
+                      namesavecus: data[i].namesavecus,
+                      locacus: data[i].locacus,
+                      timesavecus: data[i].timesavecus
+                    }
+
+                    events.push(event);
+                  }
+                    localStorage.setItem('cachedDatacus', JSON.stringify(data));
+                    renderDatacus(data);
+                     $.LoadingOverlay("hide");
+                },
+                error: function() {
+                    alert('เกิดข้อผิดพลาดในการโหลดข้อมูล');
+                }
+            });
+        }
+
+
+        function renderDatacus(data) {
+                $('#calendarcus').fullCalendar('destroy'); 
+                $('#calendarcus').fullCalendar({
+        header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'month'
+        },
+        height: 'auto',
+        editable: true,
+        timezone: 'local',
+        locale: 'th',
+        nextDayThreshold: '00:00:00',
+        dayNamesShort: ['อา', 'จ', 'อ', 'พ', 'พฤ', 'ศ', 'ส'],
+    eventRender: function(event, element) {
+      // ตรวจสอบว่า event เกิดขึ้นในเดือนที่กำลังแสดงหรือไม่
+      var calendarDate = $('#calendarcus').fullCalendar('getDate');
+      var currentMonth = calendarDate.month();
+      var currentYear = calendarDate.year();
+      var eventMonth = moment(event.start).month();
+      var eventYear = moment(event.start).year();
+
+      if (eventMonth === currentMonth && eventYear === currentYear) {
+        element.find('.fc-time').hide();
+        element.find('.fc-title').html(event.namecus + '<br>' + event.locacus);
+
+        if (event.locacus === 'CM2') {
+          element.css('background-color', '#1E90FF');
+        } else if (event.locacus === 'CM1') {
+          element.css('background-color', '#CD5C5C');
+        } else if (event.locacus === 'CM1/CM2') {
+          element.css('background-color', '#8470FF');
+        } else if (event.locacus === 'Gofield') {
+          element.css('background-color', '#76bc43');
+        }
+      } else {
+        // ซ่อน event ถ้าไม่ใช่เดือนที่กำลังแสดง
+        element.hide();
+      }
+
+    },
+
+
+
+
+                  events: data,
+        eventClick: function(event) {
+          // แสดง Popup รายละเอียดเมื่อคลิกที่ event
+          Swal.fire({
+            html: `
+              <br>
+              <table class='table table-bordered table-striped table-hover text-start' style="width:100%">
+                <tr style="text-align: center; color: blue;">
+                  <img src="${event.piccus}" alt="รูป" style="width: 100%; height: auto; max-width: 600px;">
+                </tr>
+                <tr>
+                  <th scope='col'>ชื่อ</th>
+                  <td style="color:blue;">${event.namecus}</td>
+                </tr>
+                <tr>
+                  <th scope='col'>เข้า</th>
+                  <td style="color:blue;">${event.locacus}</td>
+                </tr>
+                <tr>
+                  <th scope='col'>วันที่ </th>
+                  <td style="color:blue;">${moment(event.start).format('DD-MM-YYYY')} - ${moment(event.end).subtract(1, 'days').format('DD-MM-YYYY')}</td>
+                </tr>
+                <tr>
+                  <th scope='col'>ชื่อผู้บันทึก</th>
+                  <td style="color:blue;">${event.namesavecus}</td>
+                </tr>
+              </table>
+            `,
+            confirmButtonText: 'ปิด',
+            showCloseButton: true,
+            customClass: {
+              popup: 'swal-wide', // เพิ่มคลาสที่กำหนดให้รูปภาพเต็มหน้าจอ
+            },
+            width: 'auto', // ตั้งค่า width เป็น auto เพื่อให้ Swal.fire ปรับขนาดให้เหมาะสม
+            imageAlt: 'รูป', // ข้อความที่จะแสดงใน alt attribute ของรูป
+          });
+        }
+      });
+      }
+
+        $(document).ready(function() {
+            $.LoadingOverlaySetup({
+                size: "12",
+                imageColor: "#0d6efd"
+            });
+            $.LoadingOverlay("show");
+              var cachedDatacus = localStorage.getItem('cachedDatacus');
+
+              if (cachedDatacus) {
+                  var parsedDatacus = JSON.parse(cachedDatacus);
+                  renderDatacus(parsedDatacus);
+                $.LoadingOverlay("hide");
+              } else {
+                  updateCalendarcus();
+              }
+
+          });
+
+        // อัปเดตปฏิทินเมื่อรีเฟรชหน้าจอ
+        $(window).on('load', function() {
+            updateCalendarcus();
+
+        });
+
+
+      </script>
+
+  </body>
+    <!-- <app-1>
+    <script type="module">
+    const app = Vue.createApp({
+      data() {
+        return {};
+      },
+      created() {
+        this.init();
+      },
+      methods: {
+        async init() {},
+
+        scrolltoupperFlex2(evt) {},
+        scrolltolowerFlex2(evt) {}
+      }
+    });
+    app.use(vant);
+    app.use(DiygwLib);
+    app.config.globalProperties.$tools = new Tools();
+    app.mixin({
+      methods: {
+        setData,
+        navigateTo,
+        showModal,
+        showToast,
+        uploadImage
+      }
+    });
+    app.mount('#app');
+  </script> -->
+  <style>
+    .flex-clz {
+      background-image: linear-gradient(135deg, #fab2ff 10%, #1904e5 100%);
+    }
+    .flex1-clz {
+      height: 15px;
+    }
+    .flex16-clz {
+      border-bottom-left-radius: 16px;
+      -webkit-animation-duration: 2000ms;
+      animation-delay: 100ms;
+      -webkit-animation-delay: 100ms;
+      border-top-right-radius: 16px;
+      animation-iteration-count: 1;
+      -webkit-animation-iteration-count: 1;
+      margin-right: 15px;
+      background-color: rgba(255, 255, 255, 0.47);
+      margin-left: 15px;
+      animation-duration: 2000ms;
+      box-shadow: 0px 1px 3px rgba(255, 168, 130, 0.49) inset;
+      overflow: hidden;
+      width: calc(100% - 15px - 15px) !important;
+      border-top-left-radius: 16px;
+      margin-top: 5px;
+      border-bottom-right-radius: 16px;
+      margin-bottom: 15px;
+    }
+    .flex4-clz {
+      padding-top: 5px;
+      padding-left: 5px;
+      padding-bottom: 5px;
+      padding-right: 5px;
+    }
+    .image-clz {
+      border-bottom-left-radius: 20px;
+      overflow: hidden;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    .image-size {
+      height: 24px !important;
+      width: 24px !important;
+    }
+    .text-clz {
+      font-weight: bold;
+      flex: 1;
+      font-size: 16px !important;
+    }
+    .text3-clz {
+      background-color: #905d36;
+      padding-top: 5px;
+      border-bottom-left-radius: 20px;
+      overflow: hidden;
+      color: #e7cfc0;
+      font-weight: bold;
+      padding-left: 10px;
+      padding-bottom: 5px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      padding-right: 10px;
+    }
+    .flex11-clz {
+      padding-top: 5px;
+      padding-left: 5px;
+      padding-bottom: 5px;
+      padding-right: 5px;
+    }
+    .image2-clz {
+      border: 3px solid #4874ff;
+      border-bottom-left-radius: 60px;
+      -webkit-animation-duration: 2000ms;
+      animation-delay: 100ms;
+      -webkit-animation-delay: 100ms;
+      border-top-right-radius: 60px;
+      animation-duration: 2000ms;
+      flex-shrink: 0;
+      overflow: hidden;
+      width: 50px !important;
+      border-top-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+      height: 50px !important;
+    }
+    .image2-size {
+      height: 50px !important;
+      width: 50px !important;
+    }
+    .text8-clz {
+      padding-top: 2px;
+      border-bottom-left-radius: 20px;
+      color: #ffffff;
+      padding-left: 8px;
+      padding-bottom: 2px;
+      border-top-right-radius: 20px;
+      margin-right: 5px;
+      margin-left: 5px;
+      overflow: hidden;
+      border-top-left-radius: 20px;
+      margin-top: -8px;
+      border-bottom-right-radius: 20px;
+      background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+      margin-bottom: 5px;
+      padding-right: 8px;
+    }
+    .flex18-clz {
+      flex: 1;
+    }
+    .text17-clz {
+      font-size: 21px !important;
+    }
+    .text19-clz {
+      padding-top: 6px;
+      color: #686868;
+      padding-left: 0px;
+      padding-bottom: 0px;
+      padding-right: 0px;
+    }
+    .flex19-clz {
+      background-color: rgba(255, 255, 255, 0.63);
+      padding-top: 1px;
+      border-bottom-left-radius: 20px;
+      box-shadow: 0px 1px 3px rgba(255, 168, 130, 0.49);
+      overflow: hidden;
+      padding-left: 3px;
+      padding-bottom: 1px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      padding-right: 3px;
+    }
+    .image5-clz {
+      border-bottom-left-radius: 20px;
+      overflow: hidden;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    .image5-size {
+      height: 24px !important;
+      width: 24px !important;
+    }
+    .text20-clz {
+      margin-left: 5px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 5px;
+    }
+    .grid-clz {
+      font-weight: bold;
+    }
+    .grid-item-clz {
+      margin: 0px;
+      padding: 10px;
+    }
+    .grid-icon-clz {
+      font-size: calc(30px - 4px) !important;
+
+      width: 30px;
+      height: 30px;
+    }
+    .flex5-clz {
+      padding-top: 5px;
+      border-bottom-left-radius: 10px;
+      z-index: 100;
+      padding-left: 10px;
+      font-size: 14px !important;
+      padding-bottom: 5px;
+      border-top-right-radius: 10px;
+      margin-right: 5px;
+      background-color: rgba(217, 217, 217, 0.13);
+      margin-left: 5px;
+      box-shadow: 0px 2px 4px 3px rgba(181, 207, 255, 0.5);
+      overflow: hidden;
+      width: calc(100% - 5px - 5px) !important;
+      border-top-left-radius: 10px;
+      margin-top: 5px;
+      border-bottom-right-radius: 10px;
+      margin-bottom: 5px;
+      padding-right: 10px;
+    }
+    .flex6-clz {
+      z-index: 100;
+      border-right: 1px solid #eee;
+    }
+    .flex7-clz {
+      z-index: 100;
+      border-right: 1px solid #eee;
+    }
+    .flex20-clz {
+      z-index: 100;
+      border-right: 1px solid #eee;
+    }
+    .flex21-clz {
+      z-index: 100;
+      border-right: 1px solid #eee;
+    }
+    .image1-clz {
+      margin-left: 0px;
+      width: 100% !important;
+      margin-top: -15px;
+      margin-bottom: 0px;
+      margin-right: 0px;
+    }
+    .image1-size {
+      height: 20px !important;
+      width: 100%;
+    }
+    .flex24-clz {
+      background-color: #ffffff;
+      margin-left: 10px;
+      border-bottom-left-radius: 6px;
+      overflow: hidden;
+      width: calc(100% - 10px - 10px) !important;
+      border-top-left-radius: 6px;
+      margin-top: 5px;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      margin-bottom: 5px;
+      margin-right: 10px;
+    }
+    .flex58-clz {
+      margin-left: 0px;
+      width: 100% !important;
+      margin-top: 0px;
+      margin-bottom: 5px;
+      margin-right: 0px;
+    }
+    .image14-size {
+      height: 26px !important;
+      width: 26px !important;
+    }
+    .text51-clz {
+      font-weight: bold;
+      flex: 1;
+      font-size: 16px !important;
+    }
+    .text52-clz {
+      color: #666666;
+      text-align: right;
+    }
+    .icon6-clz {
+      color: #666666;
+    }
+    .icon6 {
+      font-size: 12px;
+    }
+    .flex27-clz {
+      flex-shrink: 0;
+      padding-top: 6px;
+      background-size: cover;
+      color: #ffffff;
+      padding-left: 6px;
+      width: 120px !important;
+      padding-bottom: 6px;
+      background-position: center center;
+      height: 120px !important;
+      padding-right: 6px;
+    }
+    .flex29-clz {
+      padding-top: 5px;
+      border-bottom-left-radius: 6px;
+      background-size: cover;
+      padding-left: 5px;
+      padding-bottom: 5px;
+      border-top-right-radius: 6px;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      flex: 1;
+      border-top-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      background-image: url({{imgurl}});
+      padding-right: 5px;
+    }
+    .text6-clz {
+      padding-top: 5px;
+      border-bottom-left-radius: 20px;
+      font-weight: bold;
+      padding-left: 5px;
+      font-size: 13px !important;
+      padding-bottom: 5px;
+      border-top-right-radius: 20px;
+      margin-right: 0px;
+      margin-left: 0px;
+      overflow: hidden;
+      width: 100% !important;
+      border-top-left-radius: 20px;
+      margin-top: 5px;
+      border-bottom-right-radius: 20px;
+      background-image: linear-gradient(45deg, #ff9700, #ed1c24);
+      margin-bottom: 5px;
+      text-align: center;
+      padding-right: 5px;
+    }
+    .flex26-clz {
+      flex-shrink: 0;
+      padding-top: 6px;
+      background-size: cover;
+      color: #ffffff;
+      padding-left: 6px;
+      width: 120px !important;
+      padding-bottom: 6px;
+      background-position: center center;
+      height: 120px !important;
+      padding-right: 6px;
+    }
+    .flex12-clz {
+      padding-top: 5px;
+      border-bottom-left-radius: 6px;
+      background-size: cover;
+      padding-left: 5px;
+      padding-bottom: 5px;
+      border-top-right-radius: 6px;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      flex: 1;
+      border-top-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      background-image: url(https://img5.pic.in.th/file/secure-sv1/IMG_20240314_214407_093.jpeg);
+      padding-right: 5px;
+    }
+    .text9-clz {
+      padding-top: 5px;
+      border-bottom-left-radius: 20px;
+      font-weight: bold;
+      padding-left: 5px;
+      font-size: 13px !important;
+      padding-bottom: 5px;
+      border-top-right-radius: 20px;
+      margin-right: 0px;
+      margin-left: 0px;
+      overflow: hidden;
+      width: 100% !important;
+      border-top-left-radius: 20px;
+      margin-top: 5px;
+      border-bottom-right-radius: 20px;
+      background-image: linear-gradient(45deg, #ff9700, #ed1c24);
+      margin-bottom: 5px;
+      text-align: center;
+      padding-right: 5px;
+    }
+    .flex23-clz {
+      flex-shrink: 0;
+      padding-top: 6px;
+      background-size: cover;
+      color: #ffffff;
+      padding-left: 6px;
+      width: 120px !important;
+      padding-bottom: 6px;
+      background-position: center center;
+      height: 120px !important;
+      padding-right: 6px;
+    }
+    .flex13-clz {
+      padding-top: 5px;
+      border-bottom-left-radius: 6px;
+      background-size: cover;
+      padding-left: 5px;
+      padding-bottom: 5px;
+      border-top-right-radius: 6px;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      flex: 1;
+      border-top-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      background-image: url(https://img5.pic.in.th/file/secure-sv1/IMG_20240314_214407_093.jpeg);
+      padding-right: 5px;
+    }
+    .text16-clz {
+      padding-top: 5px;
+      border-bottom-left-radius: 20px;
+      font-weight: bold;
+      padding-left: 5px;
+      font-size: 13px !important;
+      padding-bottom: 5px;
+      border-top-right-radius: 20px;
+      margin-right: 0px;
+      margin-left: 0px;
+      overflow: hidden;
+      width: 100% !important;
+      border-top-left-radius: 20px;
+      margin-top: 5px;
+      border-bottom-right-radius: 20px;
+      background-image: linear-gradient(45deg, #ff9700, #ed1c24);
+      margin-bottom: 5px;
+      text-align: center;
+      padding-right: 5px;
+    }
+    .flex14-clz {
+      flex-shrink: 0;
+      padding-top: 6px;
+      background-size: cover;
+      color: #ffffff;
+      padding-left: 6px;
+      width: 120px !important;
+      padding-bottom: 6px;
+      background-position: center center;
+      height: 120px !important;
+      padding-right: 6px;
+    }
+    .flex15-clz {
+      padding-top: 5px;
+      border-bottom-left-radius: 6px;
+      background-size: cover;
+      padding-left: 5px;
+      padding-bottom: 5px;
+      border-top-right-radius: 6px;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      flex: 1;
+      border-top-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      background-image: url(https://img5.pic.in.th/file/secure-sv1/IMG_20240314_214407_093.jpeg);
+      padding-right: 5px;
+    }
+    .text28-clz {
+      font-weight: bold;
+      font-size: 18px !important;
+    }
+    .text29-clz {
+      color: #d4d4d4;
+      font-size: 13px !important;
+    }
+    .text30-clz {
+      padding-top: 5px;
+      border-bottom-left-radius: 20px;
+      font-weight: bold;
+      padding-left: 5px;
+      font-size: 13px !important;
+      padding-bottom: 5px;
+      border-top-right-radius: 20px;
+      margin-right: 0px;
+      margin-left: 0px;
+      overflow: hidden;
+      width: 100% !important;
+      border-top-left-radius: 20px;
+      margin-top: 5px;
+      border-bottom-right-radius: 20px;
+      background-image: linear-gradient(45deg, #ff9700, #ed1c24);
+      margin-bottom: 5px;
+      text-align: center;
+      padding-right: 5px;
+    }
+    .flex25-clz {
+      flex-shrink: 0;
+      padding-top: 6px;
+      background-size: cover;
+      color: #ffffff;
+      padding-left: 6px;
+      width: 120px !important;
+      padding-bottom: 6px;
+      background-position: center center;
+      height: 120px !important;
+      padding-right: 6px;
+    }
+    .flex22-clz {
+      padding-top: 5px;
+      border-bottom-left-radius: 6px;
+      background-size: cover;
+      padding-left: 5px;
+      padding-bottom: 5px;
+      border-top-right-radius: 6px;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      flex: 1;
+      border-top-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      background-image: url(https://img5.pic.in.th/file/secure-sv1/IMG_20240314_214407_093.jpeg);
+      padding-right: 5px;
+    }
+    .text31-clz {
+      font-weight: bold;
+      font-size: 18px !important;
+    }
+    .text32-clz {
+      color: #d4d4d4;
+      font-size: 13px !important;
+    }
+    .text33-clz {
+      padding-top: 5px;
+      border-bottom-left-radius: 20px;
+      font-weight: bold;
+      padding-left: 5px;
+      font-size: 13px !important;
+      padding-bottom: 5px;
+      border-top-right-radius: 20px;
+      margin-right: 0px;
+      margin-left: 0px;
+      overflow: hidden;
+      width: 100% !important;
+      border-top-left-radius: 20px;
+      margin-top: 5px;
+      border-bottom-right-radius: 20px;
+      background-image: linear-gradient(45deg, #ff9700, #ed1c24);
+      margin-bottom: 5px;
+      text-align: center;
+      padding-right: 5px;
+    }
+    .flex8-clz {
+      border: 1px solid #ffcaab;
+      border-bottom-left-radius: 16px;
+      border-top-right-radius: 16px;
+      margin-right: 15px;
+      background-color: rgba(255, 255, 255, 0.47);
+      margin-left: 15px;
+      box-shadow: 0px 1px 3px rgba(255, 168, 130, 0.49);
+      overflow: hidden;
+      width: calc(100% - 15px - 15px) !important;
+      border-top-left-radius: 16px;
+      margin-top: 5px;
+      border-bottom-right-radius: 16px;
+      margin-bottom: 5px;
+    }
+    .flex9-clz {
+      flex: 1;
+    }
+    .text5-clz {
+      margin-left: 10px;
+      font-weight: bold;
+      flex: 1;
+      font-size: 18px !important;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      margin-right: 10px;
+    }
+    .flex10-clz {
+      margin-left: 5px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 5px;
+    }
+    .text10-clz {
+      color: #7d7d7d;
+    }
+    .icon3-clz {
+      color: #7d7d7d;
+    }
+    .icon3 {
+      font-size: 12px;
+    }
+    .grid3-clz {
+      font-weight: bold;
+    }
+    .grid3-item-clz {
+      margin: 0px;
+      padding: 10px;
+    }
+    .grid3-icon-clz {
+      font-size: calc(30px - 4px) !important;
+
+      width: 30px;
+      height: 30px;
+    }
+    .grid3-badge-0 {
+      padding-left: 0px;
+      padding-right: 0px;
+      right: -6px;
+      top: -4px;
+    }
+    .grid3-badge-3 {
+      padding-left: 0px;
+      padding-right: 0px;
+      right: -6px;
+      top: -5px;
+    }
+    .flex3-clz {
+      border: 1px solid #ffcaab;
+      border-bottom-left-radius: 16px;
+      border-top-right-radius: 16px;
+      margin-right: 15px;
+      background-color: rgba(255, 255, 255, 0.47);
+      margin-left: 15px;
+      box-shadow: 0px 1px 3px rgba(255, 168, 130, 0.49);
+      overflow: hidden;
+      width: calc(100% - 15px - 15px) !important;
+      border-top-left-radius: 16px;
+      margin-top: 5px;
+      border-bottom-right-radius: 16px;
+      margin-bottom: 5px;
+    }
+    .text4-clz {
+      margin-left: 10px;
+      font-weight: bold;
+      width: calc(100% - 10px - 10px) !important;
+      font-size: 18px !important;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      margin-right: 10px;
+    }
+    .grid1-clz {
+      border: 1px solid #eee;
+      font-weight: bold;
+    }
+    .grid1-item-clz {
+      margin: 0px;
+      padding: 10px;
+    }
+    .grid1-icon-clz {
+      font-size: calc(30px - 4px) !important;
+
+      width: 30px;
+      height: 30px;
+    }
+    .grid2-item-clz {
+      margin: 0px;
+      padding: 10px;
+    }
+    .grid2-icon-clz {
+      font-size: calc(30px - 4px) !important;
+
+      width: 30px;
+      height: 30px;
+    }
+    .flex17-clz {
+      border: 1px solid #ffcaab;
+      border-bottom-left-radius: 16px;
+      border-top-right-radius: 16px;
+      margin-right: 15px;
+      background-color: rgba(255, 255, 255, 0.47);
+      margin-left: 15px;
+      box-shadow: 0px 1px 3px rgba(255, 168, 130, 0.49);
+      overflow: hidden;
+      width: calc(100% - 15px - 15px) !important;
+      border-top-left-radius: 16px;
+      margin-top: 5px;
+      border-bottom-right-radius: 16px;
+      margin-bottom: 5px;
+    }
+    .text18-clz {
+      margin-left: 10px;
+      font-weight: bold;
+      width: calc(100% - 10px - 10px) !important;
+      font-size: 18px !important;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      margin-right: 10px;
+    }
+    .grid4-clz {
+      font-weight: bold;
+    }
+    .grid4-item-clz {
+      margin: 0px;
+      padding: 10px;
+    }
+    .grid4-icon-clz {
+      font-size: calc(40px - 4px) !important;
+
+      width: 40px;
+      height: 40px;
+    }
+    .container30324 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    .container30324 {
+      padding-bottom: 80px;
+    }
+  </style>
+</app-1>
+</html>
