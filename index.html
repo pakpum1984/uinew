@@ -6,13 +6,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://miniapp-th.vercel.app/common/vant.min.css" />
 		<script src="https://miniapp-th.vercel.app/common/vue.js"></script>
 		<script src="https://miniapp-th.vercel.app/common/vant.min.js"></script>
 		<script src="https://miniapp-th.vercel.app/common/axios.min.js"></script>
 		<script src="https://sheet2api.com/v1/template.js"></script>
 		<link rel="stylesheet" href="https://miniapp-th.vercel.app/common/diygw-ui/index.css" />
-		  <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+
+    
     <style>
       body {
         font-family: "Prompt", sans-serif;
@@ -22,17 +25,17 @@
     </style>
 	</head>
 	<body>
-        <div id="app">
-            
-<div class="container container30324" data-spreadsheet-api="https://sheet2api.com/v1/27M01D5PTe81/data">
+        <!-- <div id="app"> -->
+       
+<div class="container-fluid container30324" id="app" data-spreadsheet-api="https://sheet2api.com/v1/27M01D5PTe81/data">
   <div class="flex flex-wrap diygw-col-24 flex-direction-column justify-end items-end flex-clz">
       <!-- #ifdef MP-WEIXIN -->
       <div class="flex flex-wrap diygw-col-24 flex-direction-column flex1-clz"></div>
       <!--  #endif -->
       <div class="flex flex-wrap diygw-col-24 items-center animate__animated animate__bounceIn flex16-clz">
           <div class="flex flex-wrap diygw-col-24 items-center flex4-clz">
-<!--               <img src="https://miniapp-th.vercel.app/static/hg-VIP.png" class="image-size diygw-image diygw-col-0 image-clz" mode="widthFix" /> -->
-              <div class="diygw-col-0 text-clz">ระบบจองรถ</div>
+              <!-- <img src="https://miniapp-th.vercel.app/static/hg-VIP.png" class="image-size diygw-image diygw-col-0 image-clz" mode="widthFix" /> -->
+              <div class="diygw-col-0 text-clz">  ระบบจองรถ</div>
               <div class="diygw-col-0 text3-clz">สิทธิ์พิเศษ</div>
           </div>
           <div class="flex flex-wrap diygw-col-0 flex-direction-column items-center flex11-clz">
@@ -45,7 +48,7 @@
               </div> -->
           </div>
           <div class="flex flex-wrap diygw-col-0 items-center flex19-clz">
-<!--               <img src="https://miniapp-th.vercel.app/static/hg-VIP.png" class="image5-size diygw-image diygw-col-0 image5-clz" mode="widthFix" /> -->
+            
               <div class="diygw-col-0 text20-clz">รายการ</div>
           </div>
           <div class="flex diygw-col-24 grid-clz">
@@ -104,96 +107,8 @@
           </div>-->
       </div>
   </div>
-  <img src="https://miniapp-th.vercel.app/static/bg.png" class="image1-size diygw-image diygw-col-24 image1-clz" mode="widthFix" />
-  <!-- <div class="flex flex-wrap diygw-col-24 flex-direction-column flex24-clz">
-      <div class="flex flex-wrap diygw-col-24 items-center flex58-clz">
-          <img src="https://miniapp-th.vercel.app/static/pj.png" class="image14-size diygw-image diygw-col-0" mode="widthFix" />
-          <div class="diygw-col-0 text51-clz">กิจกรรมมาใหม่</div>
-          <div class="diygw-col-0 text52-clz">ดูเพิ่มเติม</div>
-          <span class="flex icon6 diygw-col-0 icon6-clz diy-icon-right"></span>
-      </div>
-      <scroll-view @scrolltoupper="scrolltoupperFlex2" @scrolltolower="scrolltolowerFlex2" scroll-x scroll-with-animation class="flex scroll-view diygw-col-24 items-center flex-nowrap">
-          <div class="flex items-center flex-nowrap">
-              <div class="flex flex-wrap diygw-col-0 flex-direction-column flex27-clz">
-                  <div class="flex flex-wrap diygw-col-0 flex-direction-column justify-end items-end flex29-clz"></div>
-                  <div class="diygw-col-24 text6-clz">คลิก</div>
-              </div>
-              <div class="flex flex-wrap diygw-col-0 flex-direction-column flex26-clz">
-                  <div class="flex flex-wrap diygw-col-0 flex-direction-column justify-end items-end flex12-clz"></div>
-                  <div class="diygw-col-24 text9-clz">คลิก</div>
-              </div>
-              <div class="flex flex-wrap diygw-col-0 flex-direction-column flex23-clz">
-                  <div class="flex flex-wrap diygw-col-0 flex-direction-column justify-end items-end flex13-clz"></div>
-                  <div class="diygw-col-24 text16-clz">คลิก</div>
-              </div>
-              <div class="flex flex-wrap diygw-col-0 flex-direction-column flex14-clz">
-                  <div class="flex flex-wrap diygw-col-0 flex-direction-column justify-end items-end flex15-clz">
-                  </div>
-                  <div class="diygw-col-24 text30-clz">คลิก</div>
-              </div>
-              <div class="flex flex-wrap diygw-col-0 flex-direction-column flex25-clz">
-                  <div class="flex flex-wrap diygw-col-0 flex-direction-column justify-end items-end flex22-clz">
-                  </div>
-                  <div class="diygw-col-24 text33-clz">คลิก</div>
-              </div>
-          </div>
-      </scroll-view>
-  </div> -->
-  <div class="flex flex-wrap diygw-col-24 flex-direction-column flex8-clz">
-      <div class="flex flex-wrap diygw-col-0 items-baseline flex9-clz">
-          <div class="diygw-col-0 text5-clz">เมนู</div>
-<!--           <div class="flex flex-wrap diygw-col-0 items-center flex10-clz">
-              <div class="diygw-col-0 text10-clz">เพิ่มเติม</div>
-              <span class="flex icon3 diygw-col-0 icon3-clz diy-icon-right"></span>
-          </div> -->
-      </div>
-      <div class="flex diygw-col-24 grid3-clz">
-          <div class="diygw-grid col-5">
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid3-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid3-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="https://miniapp-th.vercel.app/static/dzf.png" />
-                          <div class="diygw-tag badge grid3-badge-0 gradual-orange">1</div>
-                      </div>
-                      <div class="diygw-grid-title">กระเป๋าหลัก</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid3-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid3-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="https://miniapp-th.vercel.app/static/dd.png" />
-                      </div>
-                      <div class="diygw-grid-title">ธุรกรรม</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid3-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid3-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="https://miniapp-th.vercel.app/static/dz.png" />
-                      </div>
-                      <div class="diygw-grid-title">แชร์</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid3-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid3-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="https://miniapp-th.vercel.app/static/dpj.png" />
-                          <div class="diygw-tag badge grid3-badge-3 orange">1</div>
-                      </div>
-                      <div class="diygw-grid-title">แจ้งเตือน</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid3-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid3-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="https://miniapp-th.vercel.app/static/thsh.png" />
-                      </div>
-                      <div class="diygw-grid-title">พ้อยมอลล์</div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+ 
+ 
   <div class="flex flex-wrap diygw-col-24 flex-direction-column flex3-clz">
       <div class="diygw-col-24 text4-clz">ปฏิทินรายการจองรถ</div>
       <div class="flex diygw-col-24 grid1-clz" style=" height:1000px;" >
@@ -203,187 +118,16 @@
 
            <iframe style="width:100%; height:1000px;" src="https://pakpum1984.github.io/carlendarcar/" frameborder="0" allowfullscreen></iframe>
 
-          
-               <!--  <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid1-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid1-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="https://miniapp-th.vercel.app/static/grid12.png" />
-                      </div>
-                      <div class="diygw-grid-title">คูปอง</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid1-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid1-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="https://miniapp-th.vercel.app/static/grid11.png" />
-                      </div>
-                      <div class="diygw-grid-title">แชร์</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid1-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid1-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="https://miniapp-th.vercel.app/static/grid6.png" />
-                      </div>
-                      <div class="diygw-grid-title">ทายบอล</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid1-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid1-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="https://miniapp-th.vercel.app/static/icon8_sz.png" />
-                      </div>
-                      <div class="diygw-grid-title">ตั้งค่า</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid1-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid1-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="https://miniapp-th.vercel.app/static/icon1_tz.png" />
-                      </div>
-                      <div class="diygw-grid-title">ดูบอลสด</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid1-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid1-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="https://miniapp-th.vercel.app/static/global/grid2.png" />
-                      </div>
-                      <div class="diygw-grid-title">ดูหนัง</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid1-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid1-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="https://miniapp-th.vercel.app/static/global/grid4.png" />
-                      </div>
-                      <div class="diygw-grid-title">เมนู</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid1-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid1-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="https://miniapp-th.vercel.app/static/grid9.png" />
-                      </div>
-                      <div class="diygw-grid-title">เมนู</div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="flex diygw-col-24">
-          <div class="diygw-grid col-4">
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid2-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar grid2-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img" src="https://miniapp-th.vercel.app/static/grid9.png" />
-                      </div>
-                      <div class="diygw-grid-title">เมนู</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid2-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar grid2-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img" src="https://miniapp-th.vercel.app/static/grid9.png" />
-                      </div>
-                      <div class="diygw-grid-title">เมนู</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid2-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar grid2-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img" src="https://miniapp-th.vercel.app/static/grid9.png" />
-                      </div>
-                      <div class="diygw-grid-title">เมนู</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid2-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar grid2-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img" src="https://miniapp-th.vercel.app/static/grid9.png" />
-                      </div>
-                      <div class="diygw-grid-title">เมนู</div>
-                  </div>
-              </div> -->
           </div> 
       </div>
   </div>
-  <!-- <div class="flex flex-wrap diygw-col-24 flex-direction-column flex17-clz">
-      <div class="diygw-col-24 text18-clz">特色功能</div>
-      <div class="flex diygw-col-24 grid4-clz">
-          <div class="diygw-grid col-4">
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid4-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid4-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="./static/icon6_dw.png" />
-                      </div>
-                      <div class="diygw-grid-title">一键挪车</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid4-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid4-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="./static/icon6_bj.png" />
-                      </div>
-                      <div class="diygw-grid-title">车险续保</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid4-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid4-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="./static/icon6_yxk.png" />
-                      </div>
-                      <div class="diygw-grid-title">洗车卡</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid4-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid4-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="./static/icon6_yj.png" />
-                      </div>
-                      <div class="diygw-grid-title">活动记录</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid4-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid4-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="./static/icon6_yhq.png" />
-                      </div>
-                      <div class="diygw-grid-title">砍价活动</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid4-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid4-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="./static/icon6_bq.png" />
-                      </div>
-                      <div class="diygw-grid-title">我要签到</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid4-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid4-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="./static/icon10_lw.png" />
-                      </div>
-                      <div class="diygw-grid-title">申请推广</div>
-                  </div>
-              </div>
-              <div class="diygw-grid-item">
-                  <div class="diygw-grid-inner grid4-item-clz">
-                      <div class="diygw-grid-icon diygw-avatar radius grid4-icon-clz">
-                          <img mode="aspectFit" class="diygw-avatar-img radius" src="./static/icon5_pz.png" />
-                      </div>
-                      <div class="diygw-grid-title">车主认证</div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div> -->
+
   <div class="flex diygw-col-24 diygw-bottom">
       <div class="diygw-grid diygw-actions">
           <button class="diygw-action">
               <div class="diygw-grid-inner">
                   <div class="diygw-grid-icon diygw-avatar" style="">
-                      <img mode="aspectFit" class="diygw-avatar-img" src="https://miniapp-th.vercel.app/static/icon8_sy.png" />
+                      <img mode="aspectFit" class="diygw-avatar-img" src="https://lh5.googleusercontent.com/d/1RDzt-kaotgDDQhHUR7vuqSudOoBOM2Oh" />
                   </div>
                   <div class="diygw-grid-title">หน้าหลัก</div>
               </div>
@@ -391,33 +135,33 @@
           <button class="diygw-action">
               <div class="diygw-grid-inner">
                   <div class="diygw-grid-icon diygw-avatar" style="">
-                      <img mode="aspectFit" class="diygw-avatar-img" src="https://miniapp-th.vercel.app/static/icon8_sp.png" />
+                      <img mode="aspectFit" class="diygw-avatar-img" src="https://lh5.googleusercontent.com/d/1_OPNCDoy9G3uYnuUoWBo9Q_JDtOqBf6T" />
                   </div>
-                  <div class="diygw-grid-title">รายการ</div>
+                  <div class="diygw-grid-title">บันทึกไมล์เข้า</div>
               </div>
           </button>
           <button class="diygw-action">
               <div class="diygw-grid-inner">
                   <div class="diygw-grid-icon diygw-avatar" style="">
-                      <img mode="aspectFit" class="diygw-avatar-img" src="https://miniapp-th.vercel.app/static/icon8_ss.png" />
+                      <img mode="aspectFit" class="diygw-avatar-img" src="https://lh5.googleusercontent.com/d/1_rKNHFeEH8Ts727ucDZXjYuKHFYpMWeJ" />
                   </div>
-                  <div class="diygw-grid-title">มาใหม่</div>
+                  <div class="diygw-grid-title">บันทึกไมล์ออก</div>
               </div>
           </button>
           <button class="diygw-action">
               <div class="diygw-grid-inner">
                   <div class="diygw-grid-icon diygw-avatar" style="">
-                      <img mode="aspectFit" class="diygw-avatar-img" src="https://miniapp-th.vercel.app/static/icon8_gwc.png" />
+                      <img mode="aspectFit" class="diygw-avatar-img" src="https://lh5.googleusercontent.com/d/11-YYTncwbPfkKOdXpj5EvV9jwrXMPsRs" />
                   </div>
-                  <div class="diygw-grid-title">คูปอง</div>
+                  <div class="diygw-grid-title">ตารางลูกค้า</div>
               </div>
           </button>
           <button class="diygw-action">
               <div class="diygw-grid-inner">
                   <div class="diygw-grid-icon diygw-avatar" style="">
-                      <img mode="aspectFit" class="diygw-avatar-img" src="https://miniapp-th.vercel.app/static/icon8_dp.png" />
+                      <img mode="aspectFit" class="diygw-avatar-img" src="https://lh5.googleusercontent.com/d/1PK_8A5LzNrvtULp8C2qBgd9Jo16HthAz" />
                   </div>
-                  <div class="diygw-grid-title">ส่วนตัว</div>
+                  <div class="diygw-grid-title">จองรถ</div>
               </div>
           </button>
       </div>
@@ -1106,10 +850,15 @@
 			width: 40px;
 			height: 40px;
 		}
-		.container30324 {
-			padding-left: 0px;
-			padding-right: 0px;
-		}
+    .container30324 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
 		.container30324 {
 			padding-bottom: 80px;
 		}
